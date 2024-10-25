@@ -24,11 +24,16 @@ class AppStyles {
     return title!.text.size(size).color(color).make();
   }
 
-  static bold({String? title, double? size, Color? color = Colors.black}) {
+  static bold(
+      {String? title,
+      double? size,
+      Color? color = Colors.black,
+      TextAlign alignment = TextAlign.center}) {
     return title!.text
         .size(size)
         .color(color)
         .fontFamily(AppFonts.sansBold)
+        .align(alignment)
         .make();
   }
 }

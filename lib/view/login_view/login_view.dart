@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:medical/consts/consts.dart';
 import 'package:medical/res/components/custom_button.dart';
 import 'package:medical/res/components/custom_textfield.dart';
+import 'package:medical/view/home_view/home.dart';
+import 'package:medical/view/sign_up_view/sign_up_view.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -19,15 +22,15 @@ class LoginView extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Image.asset(
-                        icLogin,
-                        width: 150,
+                      Image.asset(icLogin, width: 150),
+                      AppStyles.bold(
+                        title: AppStrings.welcomeBack,
+                        size: AppSizes.size18,
                       ),
                       AppStyles.bold(
-                          title: AppStrings.welcomeBack, size: AppSizes.size18),
-                      AppStyles.bold(
-                          title: AppStrings.weAreExcited,
-                          size: AppSizes.size18),
+                        title: AppStrings.weAreExcited,
+                        size: AppSizes.size18,
+                      ),
                     ],
                   ),
                 ),
@@ -45,22 +48,36 @@ class LoginView extends StatelessWidget {
                         Align(
                           alignment: Alignment.centerRight,
                           child: AppStyles.normal(
-                              title: AppStrings.forgetPassword),
+                            title: AppStrings.forgetPassword,
+                          ),
                         ),
                         20.heightBox,
                         CustomButton(
-                            buttonText: AppStrings.login, onTap: () {}),
+                          buttonText: AppStrings.login,
+                          onTap: () {
+                            Get.to(() => const Home());
+                          },
+                        ),
                         20.heightBox,
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            AppStyles.normal(title: AppStrings.dontHaveAccount),
+                            AppStyles.normal(
+                              title: AppStrings.dontHaveAccount,
+                              size: AppSizes.size16,
+                            ),
                             8.widthBox,
-                            AppStyles.bold(
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(() => const SignUpView());
+                              },
+                              child: AppStyles.bold(
                                 title: AppStrings.signup,
-                                size: AppSizes.size16),
+                                size: AppSizes.size16,
+                              ),
+                            ),
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),

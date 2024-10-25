@@ -173,6 +173,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  sliver_grid_view:
+    dependency: "direct main"
+    description:
+      name: sliver_grid_view
+      sha256: d45a71589c5a1827ea98e64f456bd670479c493ec42e0c14565283493adf7d92
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
   source_span:
     dependency: transitive
     description:
