@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical/consts/colors.dart';
+import 'package:medical/view/appointment_view/appointment_view.dart';
 import 'package:medical/view/category_view/category_view.dart';
 import 'package:medical/view/home_view/home_view.dart';
 import 'package:medical/view/login_view/login_view.dart';
@@ -17,6 +18,7 @@ class _HomeState extends State<Home> {
 
   List screenList = [
     const HomeView(),
+    const AppointmentView(),
     const CategoryView(),
     const LoginView(),
     const SettingsView(),
@@ -39,6 +41,8 @@ class _HomeState extends State<Home> {
         },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.date_range), label: 'Appointments'),
           BottomNavigationBarItem(icon: Icon(Icons.category), label: 'Dector'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'profile'),
           BottomNavigationBarItem(

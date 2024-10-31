@@ -22,7 +22,7 @@ class LoginView extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Image.asset(icLogin, width: 150),
+                      Image.asset(icSignUp, width: 110),
                       AppStyles.bold(
                         title: AppStrings.welcomeBack,
                         size: AppSizes.size18,
