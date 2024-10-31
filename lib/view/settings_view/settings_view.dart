@@ -20,6 +20,7 @@ class SettingsView extends StatelessWidget {
         children: [
           ListTile(
             leading: CircleAvatar(
+              radius: 26,
               child: Image.asset(icSignUp),
             ),
             title: Text('User Name'),
